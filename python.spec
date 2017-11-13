@@ -48,7 +48,7 @@
 
 %global with_gdb_hooks 1
 
-%global with_systemtap 1
+%global with_systemtap 0
 
 # some arches don't have valgrind so we need to disable its support on them
 %ifarch %{ix86} x86_64 ppc ppc64 s390x
@@ -156,8 +156,6 @@ BuildRequires: openssl-devel
 BuildRequires: pkgconfig
 BuildRequires: readline-devel
 BuildRequires: sqlite-devel
-
-BuildRequires: systemtap-sdt-devel
 
 %if 0%{?with_systemtap}
 BuildRequires: systemtap-sdt-devel
