@@ -4,6 +4,10 @@
 # turn of default bytecompilation and use the built Python for it
 %global _turn_off_bytecompile 1
 
+# must redefine this in the spec file because OBS doesn't know how
+# to handle macros in BuildRequires statements
+%{?scl:%global scl_prefix %{scl}-}
+
 # ======================================================
 # Conditionals and other variables controlling the build
 # ======================================================
